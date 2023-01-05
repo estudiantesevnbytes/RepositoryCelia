@@ -1,0 +1,57 @@
+
+<h1>disney</h1>
+
+<p>
+  pagina: <input type="number" [(ngModel)]="n" />
+
+  <p><button (click)="agregar()">Agregar</button></p>
+
+
+
+<div>
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th >Number</th>
+        <th >Name</th>
+        <th> Image </th>
+        <th>otros</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Personaje of Personajes">
+           
+            <td > <div >{{Personaje._id}}</div> </td>
+            <td> {{Personaje.name}} </td>
+            <img [src]="Personaje.imageUrl"
+            style="width:70px"> 
+            
+
+
+
+            
+        </tr>
+
+      </tbody>
+      </table>
+
+>
+      
+      <nav>
+        <ul>        
+        <li>
+          <a routerLink="InfoPersonajes/id"
+          routerLinkActive="active" ariaCurrentWhenActive="page" 
+          >info</a>
+        </li></ul>  
+             
+      </nav>
+
+   
+    
+    <router-outlet></router-outlet> 
+
+
+  
+   
+
